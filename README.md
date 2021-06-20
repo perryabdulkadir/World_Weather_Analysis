@@ -7,7 +7,9 @@ This project utilizes Openweather API to pull weather data for 2000 randomly gen
 
 ## Resources
 Software: Python 3.8.6, Jupyter Notebook
+
 Python packages: citipy, gmaps, requests, pandas, matplotlib, numpy, datetime
+
 APIs: OpenWeatherMap, Google Maps
 
 ## Results
