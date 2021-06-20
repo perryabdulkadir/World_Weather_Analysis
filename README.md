@@ -12,7 +12,27 @@ Python packages: citipy, gmaps, requests, pandas, matplotlib, numpy, datetime
 
 APIs: OpenWeatherMap, Google Maps
 
-## Results
+## Building the App
+
+### Creating the Weather Database
+
+The first step in creating the app was pulling weather data. To start, I randomly generated 1500 pairs of longitudinal and latitudinal coordinates using the code below: 
+
+![coordinate_generation.PNG](Resources/coordinate_generation.PNG) 
+
+Next, using citipy, I retrieved the nearest city to each coordinate. Some random coordinates were in uninhabited areas like the ocean or Antarctica. Additionally, I specified that only unique cities should be added to the list of cities. 
+
+![citipy.PNG](Resources/citipy.PNG) 
+
+This left 630 cities in the cities list. The OpenWeather API was then used to pull the weather for each of the cities in that list using the code below: 
+
+![openweather_api.PNG](Resources/openweather_api.PNG) 
+
+After converting the data to a data frame and reordering the columns, we are left with this: 
+
+![weather_df.PNG](Resources/weather_df) 
+
+
 
 
 ## Summary
