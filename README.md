@@ -1,9 +1,9 @@
 # World Weather Analysis
-Using OpenWeather, Google Maps API, Python, and the GMaps Python package to build a vacation itinerary selection app
+Using OpenWeather, Google Maps API, Python, and the gmaps Python package to build a vacation itinerary selection app
 
 ## Overview of Analysis
 
-This project utilizes Openweather API to pull weather data for 2000 randomly generated coordinates. Using citipy, the nearest cities to these coordinates were collected. Following this, I used Google Maps API to pull the names of hotels near the selected cities. The end result for the user is the ability to specify the preferred weather for their next vacation and after this they are provided a map of hotels that meet their specifications. Using the Google maps API, I also created an itinerary for a hypethetical trip between four cities in Australia. 
+This project utilizes Openweather API to pull weather data for 2000 randomly generated coordinates. Using citipy, the nearest cities to these coordinates were collected. Following this, I used Google Maps API to pull the names of hotels near the selected cities. The result for the user is the ability to specify the preferred weather for their next vacation and after this they are provided a map of hotels that meet their specifications. Using the Google maps API, I also created an itinerary for a hypothetical trip between four cities in Australia. 
 
 ## Resources
 Software: Python 3.8.6, Jupyter Notebook
@@ -70,7 +70,7 @@ After exporting the [resulting data frame](https://github.com/perryabdulkadir/Wo
 
 ![marker_text.PNG](Resources/marker_text.PNG) 
 
-Finally, I used the GMaps Python package to place each hotel as a marker on a global map. 
+Finally, I used the gmaps Python package to place each hotel as a marker on a global map. 
 ```
 # 11a. Add a marker layer for each city to the map. 
 locations = hotel_df[["Lat", "Lng"]]
@@ -87,16 +87,16 @@ fig
 
 ### Creating a Travel Itinerary Map
 
-The first step of creating the travel itinerary map was importing dependencies, the GMaps API key, and reading in WeatherPy_vacation.csv as vacation_df. I then had to choose four cities in the same country to create a road trip connecting them all. I chose four Australian towns: Flinders, Hobart, Seddon, and Mount Gambier.
+The first step of creating the travel itinerary map was importing dependencies, the gmaps API key, and reading in WeatherPy_vacation.csv as vacation_df. I then had to choose four cities in the same country to create a road trip connecting them all. I chose four Australian towns: Flinders, Hobart, Seddon, and Mount Gambier.
 
-I created five dataframes: one for each stop on the trip (the start, end, first stop, second stop, and third stop). It was a circular trip starting and ending in Flinders, so I used the loc method to set vacation_start and vacation_end equal to the Flinders row of vacation_df. 
+I created five data frames: one for each stop on the trip (the start, end, first stop, second stop, and third stop). It was a circular trip starting and ending in Flinders, so I used the loc method to set vacation_start and vacation_end equal to the Flinders row of vacation_df. 
 
 ```
 vacation_start = vacation_df.loc[vacation_df["City"] == "Flinders"]
 vacation_end = vacation_df.loc[vacation_df["City"] == "Flinders"]
 ```
 
-The same strategy was repeated for the other three stops on the journey. Next, I retrieved the latitude-longitude pairs for each city from their respective dataframes as tuples using the to_numpy function and list indexing.
+The same strategy was repeated for the other three stops on the journey. Next, I retrieved the latitude-longitude pairs for each city from their respective data frames as tuples using the to_numpy function and list indexing.
 
 ```
 start = (vacation_start.to_numpy()[0][5], vacation_start.to_numpy()[0][6])
@@ -106,7 +106,7 @@ stop2 = (vacation_stop2.to_numpy()[0][5], vacation_stop2.to_numpy()[0][6])
 stop3 = (vacation_stop3.to_numpy()[0][5], vacation_stop3.to_numpy()[0][6])
 ```
 
-Subsequently, using the GMaps package, I created a map using the cities as waypoints.
+Subsequently, using the gmaps package, I created a map using the cities as waypoints.
 
 ![waypoint_code.PNG](Resources/waypoint_code.PNG) 
 
@@ -130,7 +130,7 @@ And this is the map after clicking all markers to view the pop-ups:
 
 ## Summary
 
-In my opinion, a similiar method could be used on the backend to build an app that would allow end-users to narrow down their vacation options and itineraries. My only suggestion would be to use a more curated list of cities instead of choosing them randomly based on latitude and longitude. 
+In my opinion, a similar method could be used on the backend to build an app that would allow end-users to narrow down their vacation options and itineraries. My only suggestion would be to use a more curated list of cities instead of choosing them randomly based on latitude and longitude. 
 
 -----
 
