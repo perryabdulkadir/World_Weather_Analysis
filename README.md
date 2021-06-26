@@ -1,4 +1,4 @@
-# World_Weather_Analysis
+# World Weather Analysis
 Using OpenWeather, Google Maps API, Python, and the GMaps Python package to build a vacation itinerary selection app
 
 ## Overview of Analysis
