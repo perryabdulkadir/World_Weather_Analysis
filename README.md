@@ -43,6 +43,25 @@ min_temp = float(input("What is the minimum temperature you would like for your 
 max_temp = float(input("What is the maximum temperature you would like for your trip? "))
 ```
 
+Next, I used the loc method the filter the data frame based on the user's inputs. 
+
+![loc_filter.PNG](Resources/loc_filter.PNG) 
+
+Then, I created a clean version of the data frame by dropping empty rows.
+```
+clean_df = preferred_cities_df[preferred_cities_df['Country'].notna()]
+```
+
+After preparing clean_df, I created a data frame identical to clean_df but with an empty column called "Hotel Name." This new dataframe is called hotel_df.
+
+```
+# 5a. Create DataFrame called hotel_df to store hotel names along with city, country, max temp, and coordinates.
+hotel_df = clean_df[["City", "Country", "Max Temp", "Description", "Lat", "Lng"]].copy()
+
+# 5b. Create a new column "Hotel Name"
+hotel_df["Hotel Name"] = ""
+```
+
 
 ## Summary
 
