@@ -82,7 +82,7 @@ fig.add_layer(marker_layer)
 fig
 ```
 
-![WeatherPy_vacation_map.PNG](Resources/WeatherPy_vacation_map.PNG) 
+![WeatherPy_vacation_map.PNG](Vacation_Search/WeatherPy_vacation_map.PNG) 
 
 
 ### Creating a Travel Itinerary Map
