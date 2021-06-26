@@ -66,6 +66,26 @@ With the hotel_df ready, I created a function called Google Maps API and request
 
 ![gmaps_api.PNG](Resources/gmaps_api.PNG) 
 
+After exporting the resulting data frame with the city as the index, I wrote a function that filled each map marker with information about the hotel. 
+
+![marker_text.PNG](Resources/marker_text.PNG) 
+
+Finally, I used the GMaps Python package to place each hotel as a marker on a global map. 
+```
+# 11a. Add a marker layer for each city to the map. 
+locations = hotel_df[["Lat", "Lng"]]
+max_temp = hotel_df["Max Temp"]
+fig = gmaps.figure(center=(30.0, 31.0), zoom_level=1.5)
+marker_layer = gmaps.marker_layer(locations, info_box_content=hotel_info)
+fig.add_layer(marker_layer)
+# 11b. Display the figure
+fig
+```
+
+![WeatherPy_vacation_map.PNG](Resources/WeatherPy_vacation_map.PNG) 
+
+
+
 
 ## Summary
 
