@@ -85,6 +85,34 @@ fig
 ![WeatherPy_vacation_map.PNG](Resources/WeatherPy_vacation_map.PNG) 
 
 
+### Creating a Travel Itinerary Map
+
+The first step of creating the travel itinerary map was importing dependencies, the GMaps API key, and reading in WeatherPy_vacation.csv as vacation_df. I then had to choose four cities in the same country to create a road trip connecting them all. I chose four Australian towns: Flinders, Hobart, Seddon, and Mount Gambier.
+
+I created five dataframes: one for each stop on the trip (the start, end, first stop, second stop, and third stop). It was a circular trip starting and ending in Flinders, so I used the loc method to set vacation_start and vacation_end equal to the Flinders row of vacation_df. 
+
+```
+vacation_start = vacation_df.loc[vacation_df["City"] == "Flinders"]
+vacation_end = vacation_df.loc[vacation_df["City"] == "Flinders"]
+```
+
+The same strategy was repeated for the other three stops on the journey. Next, I retrieved the latitude-longitude pairs for each city from their respective dataframes as tuples using the to_numpy function and list indexing.
+
+```
+start = (vacation_start.to_numpy()[0][5], vacation_start.to_numpy()[0][6])
+end = (vacation_end.to_numpy()[0][5], vacation_end.to_numpy()[0][6])
+stop1 = (vacation_stop1.to_numpy()[0][5], vacation_stop1.to_numpy()[0][6])
+stop2 = (vacation_stop2.to_numpy()[0][5], vacation_stop2.to_numpy()[0][6])
+stop3 = (vacation_stop3.to_numpy()[0][5], vacation_stop3.to_numpy()[0][6])
+```
+
+Subsequently, using the GMaps package, I created a map using the cities as waypoints.
+
+![waypoint_code.PNG](Resources/waypoint_code.PNG) 
+
+In order to incorporate the informational marker pop-up functionality from the travel destination map section, I first combined the four cities' data frames into one.
+
+![hotel_concat.PNG](Resources/hotel_concat.PNG) 
 
 
 ## Summary
