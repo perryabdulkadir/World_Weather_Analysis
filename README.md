@@ -32,7 +32,9 @@ After converting the data to a data frame and reordering the columns, we are lef
 
 ![weather_df.PNG](Resources/weather_df.PNG) 
 
+I then exported the data frame as [WeatherPy_Database.csv](https://github.com/perryabdulkadir/World_Weather_Analysis/blob/main/Weather_Database/WeatherPy_Database.csv) and saved it to the Weather_Database folder.
 
+### Creating a Customer Travel Destinations Map
 
 
 ## Summary
