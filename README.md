@@ -61,6 +61,10 @@ hotel_df = clean_df[["City", "Country", "Max Temp", "Description", "Lat", "Lng"]
 # 5b. Create a new column "Hotel Name"
 hotel_df["Hotel Name"] = ""
 ```
+ 
+With the hotel_df ready, I created a function called Google Maps API and requested "lodging" within 5km of latitude/longitude of every city. The function pulled the first hotel listed and saved the names in JSON format. I created an exception so if there was no hotel within 5km it would print "Hotel not found... skipping."
+
+![gmaps_api.PNG](Resources/gmaps_api.PNG) 
 
 
 ## Summary
