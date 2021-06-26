@@ -114,6 +114,19 @@ In order to incorporate the informational marker pop-up functionality from the t
 
 ![hotel_concat.PNG](Resources/hotel_concat.PNG) 
 
+I refactored the code from the travel destination map to display the summary information for the four Australian cities. 
+
+![waypoint_map_code.PNG](Resources/waypoint_map_code.PNG) 
+
+This ultimately resulted in a functional map. This is the unobstructed map showing the route: 
+
+![WeatherPy_travel_map.PNG](Resources/WeatherPy_travel_map.PNG) 
+
+And this is the map after clicking all markers to view the pop-ups:
+
+![WeatherPy_travel_map_markers.PNG](Resources/WeatherPy_travel_map_markers.PNG) 
+
+
 
 ## Summary
 
