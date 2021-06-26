@@ -120,11 +120,11 @@ I refactored the code from the travel destination map to display the summary inf
 
 This ultimately resulted in a functional map. This is the unobstructed map showing the route: 
 
-![WeatherPy_travel_map.PNG](Resources/WeatherPy_travel_map.PNG) 
+![WeatherPy_travel_map.PNG](Vacation_Itinerary/WeatherPy_travel_map.PNG) 
 
 And this is the map after clicking all markers to view the pop-ups:
 
-![WeatherPy_travel_map_markers.PNG](Resources/WeatherPy_travel_map_markers.PNG) 
+![WeatherPy_travel_map_markers.PNG](Vacation_Itinerary/WeatherPy_travel_map_markers.PNG) 
 
 
 
