@@ -66,7 +66,7 @@ With the hotel_df ready, I created a function called Google Maps API and request
 
 ![gmaps_api.PNG](Resources/gmaps_api.PNG) 
 
-After exporting the resulting data frame with the city as the index, I wrote a function that filled each map marker with information about the hotel. 
+After exporting the [resulting data frame](https://github.com/perryabdulkadir/World_Weather_Analysis/blob/main/Vacation_Itinerary/WeatherPy_vacation.csv) to .csv with the city as the index, I wrote a function that filled each map marker with information about the hotel. 
 
 ![marker_text.PNG](Resources/marker_text.PNG) 
 
