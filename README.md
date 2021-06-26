@@ -1,5 +1,5 @@
 # World_Weather_Analysis
-Columbia Data Science Module 6
+Using OpenWeather, Google Maps API, Python, and the GMaps Python package to build a vacation itinerary selection app
 
 ## Overview of Analysis
 
@@ -130,7 +130,7 @@ And this is the map after clicking all markers to view the pop-ups:
 
 ## Summary
 
-
+In my opinion, a similiar method could be used on the backend to build an app that would allow end-users to narrow down their vacation options and itineraries. My only suggestion would be to use a more curated list of cities instead of choosing them randomly based on latitude and longitude. 
 
 -----
 
