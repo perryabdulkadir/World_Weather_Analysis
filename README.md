@@ -36,6 +36,13 @@ I then exported the data frame as [WeatherPy_Database.csv](https://github.com/pe
 
 ### Creating a Customer Travel Destinations Map
 
+After loading the WeatherPy_Database.csv into the Vacation_Search.ipynb, I wrote code prompting users to select their minimum and maximum preferred temperatures. 
+
+```
+min_temp = float(input("What is the minimum temperature you would like for your trip? "))
+max_temp = float(input("What is the maximum temperature you would like for your trip? "))
+```
+
 
 ## Summary
 
