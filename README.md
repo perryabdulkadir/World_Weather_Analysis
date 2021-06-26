@@ -30,7 +30,7 @@ This left 630 cities in the cities list. The OpenWeather API was then used to pu
 
 After converting the data to a data frame and reordering the columns, we are left with this: 
 
-![weather_df.PNG](Resources/weather_df) 
+![weather_df.PNG](Resources/weather_df.PNG) 
 
 
 
